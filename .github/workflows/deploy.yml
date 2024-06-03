@@ -35,10 +35,8 @@ jobs:
         with:
           node-version: 20
           cache: 'npm'
-      - name: Authenticate with private NPM package
-        run: npm login --scope=@seinsdieum --auth-type=legacy --registry=https://npm.pkg.github.com | echo -e 'seinsdieum\n${{ secrets.NPM_TOKEN }}'
       - name: Install dependencies
-        run: npm ci
+        run: npm login --scope=@seinsdieum --auth-type=legacy --registry=https://npm.pkg.github.com | echo -e 'seinsdieum\n${{ secrets.NPM_TOKEN }}' | npm ci
       - name: Build
         run: npm run build
       - name: Setup Pages
