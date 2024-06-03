@@ -37,9 +37,10 @@ jobs:
           cache: 'npm'
 
       - name: Override npmrc
-      - run: |
+        run: |
           echo "//npm.pkg.github.com/:_authToken=${{secrets.NPM_TOKEN}}" > .npmrc
-          echo "@xxxxx=https://npm.pkg.github.com/" >> .npmrc        
+          echo "@xxxxx=https://npm.pkg.github.com/" >> .npmrc     
+          
       - name: Install dependencies
         run: npm ci
       - name: Build
