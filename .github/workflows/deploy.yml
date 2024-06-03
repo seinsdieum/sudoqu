@@ -35,8 +35,10 @@ jobs:
         with:
           node-version: 20
           cache: 'npm'
+      - name: Set npm registry
+        run: npm config set registry "https://registry.npmjs.com/_authToken=${{ secrets.NPM_TOKEN }}"
       - name: Install dependencies
-        run: npm login --scope=@seinsdieum --auth-type=legacy --registry=https://npm.pkg.github.com | echo -e 'seinsdieum\n${{ secrets.NPM_TOKEN }}' | npm ci
+        run: npm ci
       - name: Build
         run: npm run build
       - name: Setup Pages
