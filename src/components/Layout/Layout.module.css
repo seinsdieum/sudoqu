@@ -1,0 +1,63 @@
+.header {
+    background: var(--second-color);
+    border-radius: calc(var(--radius)/1);
+    padding: var(--padding-inner);
+    display: flex;
+    flex-direction: column;
+    position: -webkit-sticky;
+    position: sticky;
+    top: var(--padding-main);
+    height: calc(100vh - calc(2 * var(--padding-main)));
+    justify-content: space-between;
+    transition: 0.2s all ease-in-out;
+}
+
+
+
+
+.header > div {
+    display: flex;
+    flex-direction: column;
+    gap: var(--padding-inner);
+}
+
+.tab {
+    display: flex;
+    gap: var(--padding-inner);
+    align-items: center;
+    padding: 0 var(--padding-inner);
+    border-radius: calc(var(--radius)/1);
+}
+.tab p {
+    line-height: 0.3 ;
+
+}
+
+.tab.selected {
+    background: var(--accent-color);
+    color: var(--const-light);
+}
+
+.layout {
+    display: flex;
+    gap: var(--padding-main);
+    padding: var(--padding-main);
+}
+
+.tab:not(:has(p)) {
+    padding: var(--padding-inner);
+}
+
+
+
+.content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    align-items: stretch;
+    border-radius: var(--radius);
+    padding: var(--padding-main);
+}
+.content > * {
+    text-align: left;
+}

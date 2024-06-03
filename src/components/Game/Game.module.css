@@ -1,0 +1,54 @@
+.game_tab {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: var(--padding-inner);
+    padding: var(--padding-inner);
+}
+
+.tabs {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.game_tab svg {
+    animation: appear var(--pre-mid-animation-timeout) ease-in-out;
+
+    font-size: 35px;
+}
+
+.game_tab h1 {
+    animation: appear var(--pre-mid-animation-timeout) ease-in-out;
+    font-size: 25px;
+
+    margin: 0;
+}
+
+.game {
+    display: flex;
+    flex-direction: column;
+    gap: var(--padding-main);
+}
+
+@keyframes appear {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.grid_container {
+    width: 400px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+

@@ -1,0 +1,90 @@
+.p_grid {
+    --p-grid-size: 100%;
+    --p-padding: var(--padding-inner);
+    display: flex;
+    flex-wrap: wrap;
+    width: var(--p-grid-size);
+    height: var(--p-grid-size);
+    place-self: center;
+    aspect-ratio: 1;
+}
+
+.p_grid_container {
+    border-radius: var(--radius);
+    padding:var(--padding-inner);
+}
+
+.p_layout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.p_cell {
+    padding: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    --p-cell-size: calc(var(--p-grid-size)/9);
+    width: var(--p-cell-size);
+    height: var(--p-cell-size);
+    aspect-ratio: 1;
+    font-size: var(--font-3);
+    font-weight: 700;
+    border: 1px solid var(--accent-color);
+
+    animation: appear var(--pre-mid-animation-timeout) ease-in-out;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.p_cell:nth-child(3n+1):not(:nth-child(9n+1)) {
+    border-left: 4px solid var(--accent-color);
+
+}
+
+.p_cell:nth-child(27n):not(:nth-child(81n)) {
+    border-bottom: 4px solid var(--accent-color);
+}
+
+.p_cell:nth-child(27n-1):not(:nth-child(80n)) {
+    border-bottom: 4px solid var(--accent-color);
+
+}
+.p_cell:nth-child(27n-2):not(:nth-child(79n)) {
+    border-bottom: 4px solid var(--accent-color);
+
+}
+.p_cell:nth-child(27n-3):not(:nth-child(78n)) {
+    border-bottom: 4px solid var(--accent-color);
+
+}
+.p_cell:nth-child(27n-4):not(:nth-child(77n)) {
+    border-bottom: 4px solid var(--accent-color);
+
+}
+.p_cell:nth-child(27n-5):not(:nth-child(76n)) {
+    border-bottom: 4px solid var(--accent-color);
+
+}
+.p_cell:nth-child(27n-6):not(:nth-child(75n)) {
+    border-bottom: 4px solid var(--accent-color);
+
+}
+.p_cell:nth-child(27n-7):not(:nth-child(74n)) {
+    border-bottom: 4px solid var(--accent-color);
+
+}
+.p_cell:nth-child(27n-8):not(:nth-child(73n)) {
+    border-bottom: 4px solid var(--accent-color);
+
+}

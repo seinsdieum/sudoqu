@@ -1,0 +1,44 @@
+.match {
+    padding-left: var(--padding-main);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    outline: none;
+    height: 100%;
+    gap: var(--padding-main);
+    position: relative;
+}
+
+.healthbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.healthbar * {
+    transition: var(--pre-mid-animation-timeout) ease-in-out;
+}
+
+.healthbar.got__error * {
+    color: crimson;
+    transition: unset;
+}
+
+
+.healthbar.got__error:after {
+    opacity: 1;
+    font-size: calc(var(--font-3));
+    transition: unset;
+    color: crimson;
+
+}
+.healthbar:after {
+    opacity: 0;
+    transition: var(--pre-mid-animation-timeout) ease-in-out;
+    content: '✕';
+    font-weight: 999;
+    font-size: 0;
+    align-self: center;
+    margin-left: var(--padding-inner)
+}

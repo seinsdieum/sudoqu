@@ -1,0 +1,41 @@
+
+.title_bar {
+
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.title_bar h2 {
+    margin: 0;
+    margin-left: var(--padding-inner)
+}
+
+.list {
+}
+
+.list:not(:has(.content.closed)) {
+}
+
+
+.content {
+
+    transition: var(--pre-mid-animation-timeout) all ease-in-out;
+    opacity: 1;
+    overflow: hidden;
+    max-height: 2000px;
+
+    border-radius: var(--radius);
+    padding: 0;
+
+}
+
+
+.content.closed {
+    transition: var(--fast-animation-timeout) all ease-in-out;
+
+    padding: 0;
+    max-height: 0;
+    opacity: 0;
+    pointer-events: none;
+}

@@ -1,0 +1,23 @@
+
+:root {
+  --pc: 100% !important;
+  --accent-color: rgb(58, 168, 79);
+}
+
+
+p {
+  font-weight: 400;
+}
+
+a.another {
+  color: var(--accent-set-1);
+  font-weight: 800;
+}
+
+a.another:hover {
+  color: var(--accent-set-2);
+}
+
+span.black {
+  font-weight: bold;
+}
